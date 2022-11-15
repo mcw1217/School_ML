@@ -22,10 +22,9 @@ def test1():
 @webserver.route("/test2/<para>")
 def test2(para):
     print(para)
-    msg = para
 
     data = json.loads(para)
-    data["server"] = "아무거나 message"
+    data["result"] = data["a"] + data["b"]
     jmsg = json.dumps(data)
     return jmsg
 
